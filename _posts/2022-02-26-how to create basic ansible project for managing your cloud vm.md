@@ -1,17 +1,17 @@
 ---
-title: How to create a simple ansible project for setting up your cloud vm instance
+title: Create a simple ansible project for setting up your cloud VM instance
 date: 2022-02-26 14:10:00 +0000
 categories: [Server, Ansible]
 tags: [Server, Ansible, Oracle Cloud server, playbook]     # TAG names should always be lowercase
 ---
 
 ## Requirements
-1. Create a server in your favourive cloud provider and make sure ssh is working.
+1. Create a server in your favorite cloud provider and make sure ssh is working.
 2. [Install ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#) 
 
 ## Setting up simple ansible project
 Today I tried to setup a VM in Oracle Private Cloud using their free tier offerings.
-This is an easy way to get a server up and running. Check out what is provided under 
+This is an easy way to get a server up and running. More info is available [here](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm). 
 I am also documenting how to setup your basic ansible project to manage your VM.
 
 Here I am using Oracle Linux 9 to setup my vm.
@@ -47,7 +47,7 @@ opc_server ansible_host=INSTANCE_PUBLIC_IP ansible_port=22 ansible_user=opc ansi
 {: .nolineno file="hosts" }
 
 ### Setting up ansible.cfg
-This is ansible where ansible specific settings are specified.
+This is where ansible specific settings are specified.
 
 ```ini
 [defaults]
@@ -60,7 +60,7 @@ pipelining = true
 
 ### Setting up vars.yml
 The vars.yml file is used to store variable that you can access from your playbooks.
-Here I am using it to keep a list of packages that I would like to install
+Here I am using it to keep a list of packages that I would like to install.
 ```yaml
 username: opc 
 packages_essential:
@@ -147,4 +147,4 @@ Finally run the ansible playbook from your terminal
 $ ansible-playbook tasks_playbook.yml
 ```
 If there are errors with any tasks playbook will stop execution
-Wish you all the best. :smirk:
+Wish you all the best. 

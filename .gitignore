@@ -8,6 +8,7 @@
 # bundler cache
 _site
 vendor
+_drafts
 
 # rubygem
 *.gem

@@ -34,9 +34,6 @@ url: 'https://avatarmomo.github.io'
 github:
   username: avatarmomo             # change to your github username
 
-plugins:
-  - jemoji
-
 
 social:
   # Change to your full name.

@@ -90,7 +90,7 @@ I have created and Ansible playbook with the tasks to perform to create a git us
 ## Install the Gitea server 
 
 After the playbook is executed, follow the webui instructions to install Gitea.
-This will create the app.ini config file in the "/data/gitea/gitea/conf/app.ini".
+This will create the `app.ini` config file in the `data/gitea/gitea/conf/app.ini`.
 Here is a redacted version of the file with the important configs for future reference.
 
 ```ini

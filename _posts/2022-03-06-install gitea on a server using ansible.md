@@ -11,7 +11,7 @@ Gitea is a lightweight git server you can self-host in your home lab using docke
 There are some configurations you have to do to get it properly working with ssh since Gitea is running inside a docker, and it does not play easily with the server ssh etc.
 I have created and Ansible playbook with the tasks to perform to create a git user on the server and configure it with the docker following the [official guide](https://docs.gitea.io/en-us/install-with-docker/) 
 ## Create the playbook 
-
+ {% raw %}
 ```yaml
 - name: Create git user on the server along with ssh keys
   ansible.builtin.user:
@@ -84,7 +84,8 @@ I have created and Ansible playbook with the tasks to perform to create a git us
       - "3000:3000"
       - "2222:22"
 ```
-{: .nolineno file="/roles/gitea/tasks/main.yml" }
+{: .nolineno file="roles/gitea/tasks/main.yml" }
+{% endraw %}
 
 ## Install the Gitea server 
 
